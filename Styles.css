@@ -1,0 +1,57 @@
+.SearchField__form{
+padding:4em;
+margin: 0 auto;
+max-width: 15rem;;
+}
+.SearchField{
+display: flex;
+padding: 0,5rem;
+}
+.gird-container{
+  
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    grid-column-gap: 0.5em;
+    grid-template-areas:
+    'left__Article left__Article middle__Artikle middle__Artikle right__Article right__Article';
+   
+}
+.left__Article,.middle__Artikle,.right__Article{
+    padding: 1em;
+    height: 10em;
+    width: 10em;
+}
+.left__Article{
+  
+    background: dodgerblue;
+    color: aliceblue;
+}
+.middle__Artikle{
+   
+    background:lavender;
+}
+
+.right__Article{ 
+
+    background:lavender;
+}
+
+h2{
+    
+    font: message-box;
+    font-size: x-large;
+    color: grey;
+    
+}
+button{   
+    background:coral; 
+    padding: 0.09em 0.8em;
+}
+
+.inputField{
+    font-style: italic;
+    background: lavender;
+    border-width: 0em;
+    padding:0.5em;
+}
