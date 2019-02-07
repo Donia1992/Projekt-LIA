@@ -1,9 +1,9 @@
-.SearchField__form{
+.search-field__form{
 padding:4em;
 margin: 0 auto;
-max-width: 15rem;;
+max-width: 30rem;;
 }
-.SearchField{
+.search-field{
 display: flex;
 padding: 0,5rem;
 }
@@ -14,30 +14,30 @@ padding: 0,5rem;
     justify-content: center;
     grid-column-gap: 0.5em;
     grid-template-areas:
-    'left__Article left__Article middle__Artikle middle__Artikle right__Article right__Article';
+    'left__article left__article middle__artikle middle__artikle right__article right__article';
    
 }
-.left__Article,.middle__Artikle,.right__Article{
+.left__article,.middle__artikle,.right__article{
     padding: 1em;
     height: 10em;
     width: 10em;
 }
-.left__Article{
+.left__article{
   
     background: dodgerblue;
     color: aliceblue;
 }
-.middle__Artikle{
+.middle__artikle{
    
     background:lavender;
 }
 
-.right__Article{ 
+.right__article{ 
 
     background:lavender;
 }
 
-h2{
+.information__header{
     
     font: message-box;
     font-size: x-large;
@@ -46,10 +46,13 @@ h2{
 }
 button{   
     background:coral; 
-    padding: 0.09em 0.8em;
+    padding: 0em 1.5em;
+    border:0rem;
 }
 
-.inputField{
+.input-field{
+    width: 30em;
+    height: 2em;
     font-style: italic;
     background: lavender;
     border-width: 0em;
