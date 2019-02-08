@@ -1,60 +1,121 @@
+.search-field{
+display: flex;
+padding: 0,5rem;
+}
 .search-field__form{
 padding:4em;
 margin: 0 auto;
 max-width: 30rem;;
 }
-.search-field{
-display: flex;
-padding: 0,5rem;
+
+.search-field__button{   
+    background:coral;
+    float: right;  
+    border:0rem;
 }
-.gird-container{
-  
+.search-field__button:hover{
+    background-color: orangered;
+}
+
+.search-field__input{
+    width: 30em;
+    height: 28px;
+    font-style: italic;
+    background: lavender;
+    border-width: 0em;
+    padding:0.5em;
+}
+
+.information-header,.information-header__stad{
+    text-align: center;
+    font: message-box;
+    font-size: x-large;
+    color: grey;
+}
+.information-header__stad{
+    color: black;
+    font-weight:bold;
+}
+.artikle-grid{
+    font-size:1em;
     display:grid;
     align-items: center;
     justify-content: center;
     grid-column-gap: 0.5em;
     grid-template-areas:
-    'left__article left__article middle__artikle middle__artikle right__article right__article';
+    'artikle-grid__left artikle-grid__left artikle-grid__middle artikle-grid__middle artikle-grid__right artikle-grid__right';
    
 }
-.left__article,.middle__artikle,.right__article{
+.artikle-grid__left,.artikle-grid__middle,.artikle-grid__right{
     padding: 1em;
-    height: 10em;
-    width: 10em;
+    height: 90%;
+    width: 20em;
 }
-.left__article{
-  
+.artikle-grid__left{
+    width: 6em;
     background: dodgerblue;
     color: aliceblue;
-}
-.middle__artikle{
-   
-    background:lavender;
-}
-
-.right__article{ 
-
-    background:lavender;
-}
-
-.information__header{
-    
     font: message-box;
-    font-size: x-large;
-    color: grey;
     
-}
-button{   
-    background:coral; 
-    padding: 0em 1.5em;
-    border:0rem;
+    }
+.artikle-grid__middle{
+    width: 6em;
+    background:lavender;
+    font: message-box;
 }
 
-.input-field{
-    width: 30em;
-    height: 2em;
-    font-style: italic;
-    background: lavender;
-    border-width: 0em;
-    padding:0.5em;
+.artikle-grid__right{ 
+    font: message-box;
+    background:lavender;
+}
+
+.artikel-grid__left__paragraph, .artikel-grid__middle__paragraph, .artikel-grid__right__paragraph{
+    font-size:0.8em;
+}
+
+
+.om-tjänsten, .om-tjänsten__target{
+    margin: auto;
+    width: 44%;
+}
+.om-tjänsten__state{
+display:none;
+
+}
+.om-tjänsten__target{
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: .25s ease;
+}
+.om-tjänsten__state:checked ~ .om-tjänsten__wrap .om-tjänsten__target{
+    opacity: 1;
+    font-size: 0.9em;
+    max-height: 999em;
+    color: #666
+    
+}
+.om-tjänsten__state ~ .om-tjänsten__trigger::before{
+    content:'Om tjänsten';
+    text-decoration: underline;
+}
+.om-tjänsten__state:checked ~ .om-tjänsten__trigger::before{
+    content:'Om tjänsten';
+}
+
+.om-tjänsten__trigger{
+     cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: #666;
+  font-size: .9em;
+  line-height: 2;
+
+}
+.visually-hidden{
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
 }

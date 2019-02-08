@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="utf-8">
     <title>ArbetsProv</title>
@@ -9,27 +9,42 @@
   
     <link href="Styles.css" rel="Stylesheet">
 </head>
+<body>
+        <script src="Script.js"></script>
+<!--detta sök fältet plus sök knappen --->
+<div class="search-field">
+    <form action="" method="get" class="search-field__form">
+ 
+    <label class="search-field__label visually-hidden" for="search-input">Ange stad eller land</label> 
+    <input class="search-field__input" type="search" name="sök" id="search-input" placeholder="Ange stad eller land"/>
 
-<form action="" method="get" class="search-field__form">
-    <div class="search-field">
-    <input class="input-field" type="text" name="search-field" placeholder="Ange stad eller land"/>
-
-    <button name="magnifying-glass" type="button">
-           <svg aria-hidden="true" viewBox="0 0 10 10"></svg>
+    <button class="search-field__button" type="submit">
+        <span class="visually-hidden">Sök efter stad eller land</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="23" focusable="false">
+            <path d="M15.73,18.6a10.14,10.14,0,1,1,2.87-2.87l5.4,5.4L21.13,24ZM5.84,5.84a6.08,6.08,0,1,0,8.6,0A6.07,6.07,0,0,0,5.84,5.84Z" fill="#FFF"/>
+        </svg>
     </button>
     </div>
-<h2 class="information__header">Information om...</h2>
-<div class="gird-container">
+</form>
 
-    <div class="left__article">Article1</div>
-    <div class="middle__artikle">Article2</div>
-    <div class="right__article">Article3 </div> 
+
+<!-- detta är huvud header -->
+<h2 class="information-header">Information om <span class="information-header__stad">Stockholm</span></h2>
+
+<div class="artikle-grid">
+    <div class="artikle-grid__left">Nodens största stad<br></div><p class="artikel-grid__left__paragraph">Stockholm är Svergies huvudstad samt landets kulturella, politiska, mediala och ekonomiska centrum. det är Svergies såväl som Nodens folkaste tätort.</p>
+    <div class="artikle-grid__middle">Världarv <br><p class="artikel-grid__middle__paragraph">Tre av Unescos världsarv ligger i Stockholmsområdet; Drottningholms slott och Birka (båda i Ekerö kummun), samt Skogskyrkogården (Stockholms kommun).</p></div>
+    <div class="artikle-grid__right">Gamla stan - Staden mellan broarna <br><p class="artikel-grid__right__paragraph">Under flera hundra år utgjorde Gamla stan den egentliga staden. Stadsdelen bildades 1926 och hade år 2006 cirka 3000 invånare. på Gamla stans norra spets återfinns Stockholms slott. </p></div>
+</div>
+
+
+<div class="om-tjänsten">
+    <input  type="checkbox" class="om-tjänsten__state" id="post-1"/>
+    <label for="post-1" class="om-tjänsten__trigger"></label>
+    <p class="om-tjänsten__wrap"><span class="om-tjänsten__target">Denna tjänsten är inte gratis </span></p>
+    
 
 </div>
-</form>
-<body>
-    <script src="Script.js"></script>
 </body>
-    
 
 </html>
