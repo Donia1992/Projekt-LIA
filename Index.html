@@ -10,8 +10,9 @@
     <link href="Styles.css" rel="Stylesheet">
 </head>
 <body>
-        <script src="Script.js"></script>
-<!--detta sök fältet plus sök knappen --->
+       
+
+<!--detta är sök fältet plus sök knappen --->
 <div class="search-field">
     <form action="" method="get" class="search-field__form">
  
@@ -20,7 +21,7 @@
 
     <button class="search-field__button" type="submit">
         <span class="visually-hidden">Sök efter stad eller land</span>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="23" focusable="false">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="26" focusable="false">
             <path d="M15.73,18.6a10.14,10.14,0,1,1,2.87-2.87l5.4,5.4L21.13,24ZM5.84,5.84a6.08,6.08,0,1,0,8.6,0A6.07,6.07,0,0,0,5.84,5.84Z" fill="#FFF"/>
         </svg>
     </button>
@@ -31,20 +32,43 @@
 <!-- detta är huvud header -->
 <h2 class="information-header">Information om <span class="information-header__stad">Stockholm</span></h2>
 
-<div class="artikle-grid">
-    <div class="artikle-grid__left">Nodens största stad<br><p class="artikel-grid__left__paragraph">Stockholm är Svergies huvudstad samt landets kulturella, politiska, mediala och ekonomiska centrum. det är Svergies såväl som Nodens folkaste tätort.</p></div>
-    <div class="artikle-grid__middle">Världarv <br><p class="artikel-grid__middle__paragraph">Tre av Unescos världsarv ligger i Stockholmsområdet; Drottningholms slott och Birka (båda i Ekerö kummun), samt Skogskyrkogården (Stockholms kommun).</p></div>
-    <div class="artikle-grid__right">Gamla stan - Staden mellan broarna <br><p class="artikel-grid__right__paragraph">Under flera hundra år utgjorde Gamla stan den egentliga staden. Stadsdelen bildades 1926 och hade år 2006 cirka 3000 invånare. på Gamla stans norra spets återfinns Stockholms slott. </p></div>
+<!--detta är artiklerna under header-->
+<div class="artikel-grid">
+    <ul class="artikel-grid__container">
+        <li class="artikel-grid__block">
+            <div class="artikel-grid__block-content artikel-grid__block-content--bg-blue">
+                <h3 class="artikel-grid__heading">Nodens största stad</h3>
+                <p class="artikel-grid__paragraph">Stockholm är Svergies huvudstad samt landets kulturella, politiska, mediala och ekonomiska centrum. det är Svergies såväl som Nodens folkaste tätort.</p>
+            </div>
+        </li>
+        <li class="artikel-grid__block">
+            <div class="artikel-grid__block-content">
+                <h3 class="artikel-grid__heading">Världarv</h3>
+                <p class="artikel-grid__paragraph">Tre av Unescos världsarv ligger i Stockholmsområdet; Drottningholms slott och Birka (båda i Ekerö kummun), samt Skogskyrkogården (Stockholms kommun).</p>
+            </div>
+         </li>
+        <li class="artikel-grid__block artikel-grid__block--large">
+            <div class="artikel-grid__block-content">
+                <h3 class="artikel-grid__heading">Gamla stan - Staden mellan broarna</h3> 
+                <p class="artikel-grid__paragraph">Under flera hundra år utgjorde Gamla stan den egentliga staden. Stadsdelen bildades 1926 och hade år 2006 cirka 3000 invånare. på Gamla stans norra spets återfinns Stockholms slott.</p>
+            
+                <button class="artikel-grid__button" type="submit">
+                    <span class="visually hidden">Läs mer ></span>
+                </button>
+            </div>
+        </li>
+    </ul>
 </div>
 
 
 <div class="om-tjänsten">
     <input  type="checkbox" class="om-tjänsten__state" id="post-1"/>
     <label for="post-1" class="om-tjänsten__trigger"></label>
-    <p class="om-tjänsten__wrap"><span class="om-tjänsten__target">Denna tjänsten är inte gratis </span></p>
+        <p class="om-tjänsten__wrap"><span class="om-tjänsten__target">Denna tjänsten är inte gratis </span></p>
     
 
 </div>
+<script src="Script.js"></script>
 </body>
 
 </html>
