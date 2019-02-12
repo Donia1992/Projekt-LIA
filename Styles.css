@@ -1,29 +1,40 @@
-.search-field{
-display: flex;
-padding: 0,5rem;
-}
-.search-field__form{
-padding:4em;
-margin: 0 auto;
-max-width: 30rem;;
+* {
+    box-sizing: border-box;
 }
 
+html, body {
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+.search-field{
+    max-width: 900px;
+    margin: 0 auto;
+}
+.search-field__form{
+    padding:4em;
+    display: flex;
+    justify-content: center;
+}
+.search-field__input{
+    width: 350px;
+    font-style: italic;
+    background: lavender;
+    border-width: 0em;
+    padding:9px;
+}
 .search-field__button{   
     background:coral;
     float: right;  
     border:0rem;
+    width: 36px;
 }
 .search-field__button:hover{
     background-color: orangered;
 }
-
-.search-field__input{
-    width: 30em;
-    height: 28px;
-    font-style: italic;
-    background: lavender;
-    border-width: 0em;
-    padding:0.5em;
+.search-field__button svg {
+    margin-top: 3px;
 }
 
 .information-header,.information-header__stad{
@@ -36,50 +47,58 @@ max-width: 30rem;;
     color: black;
     font-weight:bold;
 }
-.artikle-grid{
-    font-size:1em;
-    display:grid;
-    align-items: center;
-    justify-content: center;
-    grid-column-gap: 0.5em;
-    grid-template-areas:
-    'artikle-grid__left artikle-grid__left artikle-grid__middle artikle-grid__middle artikle-grid__right artikle-grid__right';
-   
+
+.artikel-grid{
+    font-size:1em;    
+    max-width: 900px;
+    margin: 0 auto;
 }
-.artikle-grid__left,.artikle-grid__middle,.artikle-grid__right{
-    padding: 1em;
-    height: 90%;
-    width: 20em;
+.artikel-grid__container{
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
 }
-.artikle-grid__left{
-    width: 6em;
-    background: dodgerblue;
-    color: aliceblue;
-    font: message-box;
-    
+.artikel-grid__block {
+    padding:1em;
+    margin:0;
+    flex:0 0 25%;
+}
+.artikel-grid__block--large {
+    flex-basis:50%;
+}
+.artikel-grid__block-content{
+    background-color:#eee;
+    padding:1em;
+    height:100%;
+}
+.artikel-grid__block-content--bg-blue {
+    background-color: dodgerblue;
+    color:#fff;
+}
+
+@media screen and (max-width:799px){
+    .artikel-grid__block {
+        flex-basis: 50%;
     }
-.artikle-grid__middle{
-    width: 6em;
-    background:lavender;
-    font: message-box;
+    .artikel-grid__block--large {
+        flex-basis:100%;
+    }
 }
 
-.artikle-grid__right{ 
-    font: message-box;
-    background:lavender;
+@media screen and (max-width:399px){
+    .artikel-grid__block {
+        flex-basis: 100%;
+    }
 }
-
-.artikel-grid__left__paragraph, .artikel-grid__middle__paragraph, .artikel-grid__right__paragraph{
-    font-size:0.8em;
-}
-
 
 .om-tjänsten, .om-tjänsten__target{
     margin: auto;
-    width: 44%;
+    max-width: 900px;
 }
 .om-tjänsten__state{
-display:none;
+    display:none;
 
 }
 .om-tjänsten__target{
@@ -104,12 +123,12 @@ display:none;
 }
 
 .om-tjänsten__trigger{
-     cursor: pointer;
-  display: inline-block;
-  padding: 0 .5em;
-  color: #666;
-  font-size: .9em;
-  line-height: 2;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 .5em;
+    color: #666;
+    font-size: .9em;
+    line-height: 2;
 
 }
 .visually-hidden{
