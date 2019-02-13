@@ -7,7 +7,7 @@ html, body {
     margin:0;
     padding:0;
 }
-
+/*------------------------------------sökfält med sökknapp-------------------------------------------------------*/
 .search-field{
     max-width: 900px;
     margin: 0 auto;
@@ -37,6 +37,7 @@ html, body {
     margin-top: 3px;
 }
 
+/*------------------------------------header-------------------------------------------------------*/
 .information-header,.information-header__stad{
     text-align: center;
     font: message-box;
@@ -47,7 +48,7 @@ html, body {
     color: black;
     font-weight:bold;
 }
-
+/*------------------------------------Artiklar och knapp-------------------------------------------------------*/
 .artikel-grid{
     font-size:1em;    
     max-width: 900px;
@@ -65,9 +66,6 @@ html, body {
     margin:0;
     flex:0 0 25%;
 }
-.artikel-grid__block--large {
-    flex-basis:50%;
-}
 .artikel-grid__block-content{
     background-color:#eee;
     padding:1em;
@@ -78,6 +76,54 @@ html, body {
     color:#fff;
 }
 
+.artikel-grid__block--large {
+    flex-basis:50%;
+}
+.artikel-grid__heading{
+    flex-basis: 100%;
+    font: message-box;
+    font-size: large;
+    font-weight: bold
+    
+}
+.artikel-grid__paragraph{
+    font: message-box;
+    font-size: smaller;
+}
+
+.artikel-grid__media-block{
+    display: flex;
+    align-items: flex-start;
+}
+.artikel-grid__block-paragraph-content{
+    margin-right: 10px;
+    max-width: 50%;
+    
+}
+.artikel-grid__img-container{
+    margin-left:10px;
+}
+.artikel-grid__img-container .artikel-grid__img{
+    max-width: 100%;
+    
+}
+.artikel-grid__button{
+    float: right;
+    border: 0rem;
+    margin-bottom: 5px;
+    margin-top:5px;
+    flex: 100%;
+    height: 34px;
+    width: 105px;
+    font: message-box;
+    font-weight:bolder;
+    color: #fff;
+    background-color: #666;
+}
+.artikel-grid__button-svg{
+    float: right;
+}
+/*------------------------------------media query för artiklar-------------------------------------------------------*/
 @media screen and (max-width:799px){
     .artikel-grid__block {
         flex-basis: 50%;
@@ -92,7 +138,7 @@ html, body {
         flex-basis: 100%;
     }
 }
-
+/*------------------------------------om tjänsten drop down-------------------------------------------------------*/
 .om-tjänsten, .om-tjänsten__target{
     margin: auto;
     max-width: 900px;
@@ -131,6 +177,7 @@ html, body {
     line-height: 2;
 
 }
+/*------------------------------------Döljer----------------------------------------------------------*/
 .visually-hidden{
     position: absolute !important;
     height: 1px; width: 1px;
