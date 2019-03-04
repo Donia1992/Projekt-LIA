@@ -14,6 +14,7 @@ h1{
     color: #666;
     font-weight: 400;
 }
+
 strong{
     font-weight: 700;
     color:#000;
@@ -21,7 +22,7 @@ strong{
 p{
     margin:0 0 10px;
 }
-/*------------------------------------sökfält med sökknapp-------------------------------------------------------*/
+/*------------------------------------Sökfält med sökknapp-------------------------------------------------------*/
 .search-field{
     max-width: 900px;
     margin: 0 auto;
@@ -98,7 +99,8 @@ p{
     font-size: 14px;
     font-weight: 400;
 }
-.artikel-grid__column,.artikel-grid__img{
+.artikel-grid__column,
+.artikel-grid__img{
     max-width: 100%;
 }
 .artikel-grid__button{
@@ -114,7 +116,7 @@ p{
     height: 16px;
     margin-left: 8px;    
 }
-/*------------------------------------media query för artiklar-------------------------------------------------------*/
+/*------------------------------------Media query för artiklar-------------------------------------------------------*/
 @media screen and (max-width:799px){
     .artikel-grid__block {
         flex-basis: 50%;
@@ -131,44 +133,34 @@ p{
     }
 }
 /*------------------------------------om tjänsten drop down-------------------------------------------------------*/
-.om-tjänsten, .om-tjänsten__target{
-    margin: auto;
-    max-width: 900px;
-}
-.om-tjänsten__state{
-    display:none;
-
-}
-.om-tjänsten__target{
-    opacity: 0;
-    max-height: 0;
-    font-size: 0;
-    transition: .25s ease;
-}
-.om-tjänsten__state:checked ~ .om-tjänsten__wrap .om-tjänsten__target{
-    opacity: 1;
-    font-size: 0.9em;
-    max-height: 999em;
-    color: #666
+.exp-section{
+    max-width: 850px;
+    margin: 0 auto;
     
 }
-.om-tjänsten__state ~ .om-tjänsten__trigger::before{
-    content:'Om tjänsten';
+.exp-section__heading, 
+.exp-section__button{
+    font-size: 11px;
+    font-weight: 400;
     text-decoration: underline;
+    display: block;
+    color: gray;
 }
-.om-tjänsten__state:checked ~ .om-tjänsten__trigger::before{
-    content:'Om tjänsten';
+.exp-section__content--hidden{
+    display: none;
+}
+.exp-section__button{
+    margin-bottom: 10px;
+    border: 0;
+    padding: 0;
+    background-color: white;
+}
+.exp-section__content{
+    font-size: 10px;
+    font-weight: 400;
+    color: gray;
 }
 
-.om-tjänsten__trigger{
-    cursor: pointer;
-    display: inline-block;
-    padding: 0 .5em;
-    color: #666;
-    font-size: .9em;
-    line-height: 2;
-
-}
 /*------------------------------------Döljer----------------------------------------------------------*/
 .visually-hidden{
     position: absolute !important;

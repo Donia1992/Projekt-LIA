@@ -11,11 +11,9 @@
 </head>
 <body>
        
-
 <!--detta är sök fältet plus sök knappen --->
-<div class="search-field">
-    <form action="" method="get" class="search-field__form">
- 
+<div class="search-field" id="city-block">
+    <form action="" method="get" id="search-form" class="search-field__form">
     <label class="search-field__label visually-hidden" for="search-input">Ange stad eller land</label> 
     <input class="search-field__input" type="search" name="sök" id="search-input" placeholder="Ange stad eller land"/>
 
@@ -28,11 +26,10 @@
     </div>
 </form>
 
-
 <!-- detta är huvud header -->
 <h1>Information om <strong>Stockholm</strong></h1>
 
-<!--detta är artiklerna under header-->
+<!--detta är artiklerna -->
 <div class="artikel-grid">
     <ul class="artikel-grid__container">
         <li class="artikel-grid__block">
@@ -66,14 +63,14 @@
     </ul>
 </div>
 
-
-<div class="om-tjänsten">
-    <input  type="checkbox" class="om-tjänsten__state" id="post-1"/>
-    <label for="post-1" class="om-tjänsten__trigger"></label>
-        <p class="om-tjänsten__wrap"><span class="om-tjänsten__target">Denna tjänsten är inte gratis </span></p>
-    
-
+<div class="exp-section">
+    <h2 class="exp-section__heading" >Om tjänsten</h2>
+    <div class="exp-section__content" id="exp-section__aria-controls"> 
+        <p>All information om städerna är hämtad från Wikipedia. Duis aute irure dolor in reprehenderit in volupatet velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p>excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
 </div>
+
 <script src="Script.js"></script>
 </body>
 
